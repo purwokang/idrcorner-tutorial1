@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Produk from './Produk';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    produk: [
+      { id: 1, namaProduk: 'Headset', harga: 100000, stok: 30 },
+      { id: 2, namaProduk: 'MIC', harga: 450000, stok: 5 },
+      { id: 3, namaProduk: 'Keyboard', harga: 30000, stok: 300 },
+      { id: 4, namaProduk: 'Printer', harga: 1500000, stok: 15 },
+      { id: 5, namaProduk: 'Hardisk', harga: 1700000, stok: 100 },
+      { id: 6, namaProduk: 'Flashdisk', harga: 120000, stok: 40 },
+      { id: 7, namaProduk: 'RAM 8 GB', harga: 800000, stok: 3 }
+    ]
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Halo, Aplikasi React Pertama</h1>
+        <Produk produkProduk={this.state.produk} />
+      </div>
+    );
+  }
 }
 
 export default App;

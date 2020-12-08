@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Halo, Aplikasi React Pertama</h1>
+        <h1>Daftar Produk</h1>
         <Produk produkProduk={this.state.produk} />
       </div>
     );
